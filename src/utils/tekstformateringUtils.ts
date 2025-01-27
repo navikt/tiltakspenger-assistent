@@ -1,5 +1,6 @@
 import {
     BehandlingStatus,
+    Subsumsjon,
     TypeBehandling,
     Utfall,
     ÅrsakTilEndring,
@@ -172,11 +173,9 @@ export const finnDeltagelsestatusTekst = (deltagelsestatus: DeltagelseStatus): s
     }
 };
 
-export const finnÅrsaksTekst = (årsak: ÅrsakTilEndring): string => {
-    switch (årsak) {
-        case ÅrsakTilEndring.ENDRING_ETTER_SØKNADSTIDSPUNKT:
-            return 'Endring etter søknadstidspunkt';
-        case ÅrsakTilEndring.FEIL_I_INNHENTET_DATA:
-            return 'Feil i innhentet data';
+export const finnSubsumsjonTekst = (subsumsjon: Subsumsjon): string => {
+    switch (subsumsjon) {
+        case Subsumsjon.TILTAKSDELTAGELSE:
+            return 'Tiltaksdeltagelse';
     }
 };
